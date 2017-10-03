@@ -5,6 +5,8 @@ http.createServer(function (request, response) {
     /* Gives you the complete url with parameters sent as well person?userid=2234 */
     var url = request.url;
 
+    var word = url.split('/')
+
    /* Send the HTTP header 
     * HTTP Status: 200 : OK
     * Content Type: text/plain
@@ -12,7 +14,7 @@ http.createServer(function (request, response) {
    response.writeHead(200, {'Content-Type': 'text/plain'});
    
    /* Send the response body */
-   response.end('URL Requested\n' + url);
+   response.end('URL Requested\n' + word[1] +"\n" + word[2]);
 }).listen(3000);
 
 
