@@ -1,0 +1,38 @@
+body {
+  padding: 20px;
+}
+
+h1, p, h2 {
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-con {
+  margin-left: 20%
+}
+
+.nav-con {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav {
+  justify-content: center;
+  float: left;
+  display: block;
+  padding: 8px;
+  background-color: white;
+}
+
+.message{
+  width: 50%;
+  margin-left: 25%;
+}

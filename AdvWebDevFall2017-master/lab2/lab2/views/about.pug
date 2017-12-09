@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div(class="nav-con")
+    a(href='/index' class='nav') Home
+    a(href='/about' class='nav') About
+    a(href='/form' class='nav') Form
+  <br />
+  <br/>
+  <br/>
+  .message= msg

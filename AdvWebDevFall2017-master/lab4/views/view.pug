@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    h1=title
+    p
+        a(href="../") Home
+    p=removed
+    if results.length
+        table(class="table")
+            thead   
+                tr
+                    th(scope="col") First Name
+                    th(scope="col") Last Name
+                    th(scope="col") Department
+                    th(scope="col") Start Date
+                    th(scope="col") Job Title
+                    th(scope="col") Salary
+                    th(scope="col")
+                    th(scope="col")
+            tbody
+              each stuff in results
+                tr
+                    td(scope="row") 
+                        =stuff.fName
+                    td(scope="row") 
+                        =stuff.lName
+                    td(scope="row") 
+                        =stuff.department
+                    td(scope="row") 
+                        =stuff.startDate.toDateString()
+                    td(scope="row")
+                        =stuff.jobTitle
+                    td(scope="row")
+                        =stuff.salary
+                    td(scope="row")
+                        a(href="../update/"+stuff._id) Update
+                    td(scope="row")
+                        a(href="../delete/"+stuff._id) Delete 
+    else
+        p No results found

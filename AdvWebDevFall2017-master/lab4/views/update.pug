@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1= title
+  p
+    a(href="/view") View
+  h2=message
+  form.form-horizontal(action="/update", method="post", role="form")
+        .form-group
+          label.control-label(for="fname") First Name
+          .col
+            input#fname.form-control(name="fname" value=results.fName)
+          label.control-label(for="lname") Last Name
+          .col
+            input#lname.form-control(name="lname" value=results.lName)
+        .form-group
+          label.control-label(for="department") Department
+          .col
+            select#department.form-control.input-sm(name="department" value=results.department)
+              option IT
+              option Sales
+              option HR
+        .form-group
+          label.control-label(for="startDate") Start Date
+          .col
+            input#startDate.form-control(type="date", name="startDate" value=results.startDate)
+        .form-group
+          label.control-label(for="jobTitle") Job Title
+          .col
+            input#jobTitle.form-control(name="jobTitle" value=results.jobTitle)
+          label.control-label(for="salary") Salary
+          .col
+            input#salary.form-control(name="salary", type="number", min="0.00", max="1000000.00", step="1000.00" value=results.salary)
+    
+        input(type="hidden" name="_id" value=results._id)
+        input(type="submit" value="Add my review") 
