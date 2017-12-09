@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div>Ajax Fetch</div>
+<script type="text/javascript">
+    let div = document.querySelector('div');
+    let htmlContent = '';
+    let myRequest = 'http://localhost:3000/todo';
+    fetch(myRequest).then(function(response){
+        return response.json()
+    }).then(function(json){
+        for (var i = 0; i < json.length; i++){
+            htmlContent += '<p>';
+            htmlContent += json[i].userId + ": ";
+            htmlContent += json[i].id + ", ";
+            htmlContent += json[i].title + ", ";
+            htmlContent += json[i].completed + " ";
+            htmlContent += '</p>';
+        }
+        div.innerHTML += htmlContent;
+        console.log(json);
+    });
+</script>
+
+</body>
+
+</html>
