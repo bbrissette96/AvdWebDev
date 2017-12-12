@@ -1,0 +1,8 @@
+mixin 404()
+    - var randomSetOfDivs = Math.floor(Math.random() * (50-20+1)) + 20
+    - var classGenerated = ['still', 'rotate', 'shrink'];
+    - for (var i = 0; i < randomSetOfDivs; i++)
+        - var randomClass = classGenerated[Math.floor(Math.random() * classGenerated.length)]
+        div(class=randomClass) 404
+
+                  

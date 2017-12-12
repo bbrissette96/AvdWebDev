@@ -33,12 +33,9 @@
 
         Sort
         <select name="sort">
-            <option value="fName">First Name</option>
-            <option value="lName">Last Name</option>
-            <option value="department">Department</option>
-            <option value="startDate">Start Date</option>
-            <option value="jobTitle">Job Title</option>
-            <option value="salary">Salary</option>
+            <option value="Name">Name</option>
+            <option value="PhoneNumber">PhoneNumber</option>
+            <option value="PhoneType">PhoneType</option>
         </select>
 
         ASC <input type="radio" name="order" value="" />
@@ -50,12 +47,9 @@
         <br />
         Column
         <select name="column">
-            <option value="fName">First Name</option>
-            <option value="lName">Last Name</option>
-            <option value="department">Department</option>
-            <option value="startDate">Start Date</option>
-            <option value="jobTitle">Job Title</option>
-            <option value="salary">Salary</option>
+            <option value="Name">Name</option>
+            <option value="PhoneNumber">PhoneNumber</option>
+            <option value="PhoneType">PhoneType</option>
          </select>
 
         <br />
@@ -121,7 +115,7 @@
                 }).catch(function(err) {
                     console.log(err);
                 });
-
+                //res.redirect('localhost:3000');
             }
         </script>
     </body>

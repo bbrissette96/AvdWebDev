@@ -1,0 +1,10 @@
+mixin colorPicker(num)
+  table(border="1")
+    tbody
+      - for (var i = 0; i < num; i++)
+        tr
+          - for (var t = 0; t < num; t++)
+            - var color = '#' + ((1<<24) * Math.random()|0).toString(16);
+            td(style={background: color}) #{color}
+              br
+              span(style="color: #fff;") #{color}

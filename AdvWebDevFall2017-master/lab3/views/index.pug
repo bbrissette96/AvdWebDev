@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  .wrapper
+    form(method='POST', action='/index', role='form')
+      div.frm
+        select(name="number")
+          option(value='0', disabled, selected=true)
+          each val in [3,4,5,10,20]
+            option= val
+      button(type='submit') Submit
+    +colorPicker(num)
+  
